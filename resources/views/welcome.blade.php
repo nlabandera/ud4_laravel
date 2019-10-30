@@ -81,18 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Nerea Labandera
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{route('rutas_vistas')}}">4.1. Rutas y vistas</a>
+                    <a href="">4.2. Rutas vista controlador</a>
+                    <a href="">4.3. Formularios</a>
+                    <a href="">4.4. Formularios con validación</a>
                 </div>
             </div>
         </div>
