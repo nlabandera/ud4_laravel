@@ -5,6 +5,5 @@
 </head>
 <body>
 	<p>Kaixo {{$nombre}}</p>
-
 </body>
 </html>

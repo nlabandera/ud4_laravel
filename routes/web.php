@@ -44,4 +44,15 @@ Route::get('/vista_controlador',function(){
 })->name('vista_controlador');
 
 Route::get('saludo','SaludoController@saluda')->name('saludo');
-Route::get('saludonombre/{nombre}','SaludoController@saludaNombre')->name('saludonombre');
+Route::get('saludonombre/{nombre}/{apellido}','SaludoController@saludaNombre')->name('saludonombre');
+Route::get('saludocolor/{nombre}/{color}','SaludoController@saludaColor')->name('saludocolor');
+
+
+// Ruta del ejercicio 4.3
+Route::get('/formulario',function(){
+	return view('formulario');
+})->name('formulario');
+
+Route::get('formulario-contacto','FormularioController@show')->name('formulario-contacto');
+
+Route::get('formulario-contacto/get','SaludoController@saludaNombre')->name('saludonombre2');
