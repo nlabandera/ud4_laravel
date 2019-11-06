@@ -1,7 +1,13 @@
+/*{
+	"es":"Hola",
+	"en":"Hello",
+	"eu":"Kaixo"
+}*/
+
 [
 	{"idioma":"castellano","saludo":"hola"},
 	{"idioma":"euskara","saludo":"kaixo"},
-	{"idioma":"ingles","saludo":"hello"},
+	{"idioma":"inglés","saludo":"hello"},
 	{"idioma":"francés","saludo":"salut"},
 	{"idioma":"italiano","saludo":"ciao"}
 ]
