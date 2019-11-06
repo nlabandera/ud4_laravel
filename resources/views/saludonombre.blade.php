@@ -4,6 +4,6 @@
 	<title>Saludo con nombre</title>
 </head>
 <body>
-	<p>Kaixo {{$nombre}}</p>
+	<p>Kaixo {{$nombre}} {{$apellido}}</p>
 </body>
 </html>

@@ -48,11 +48,18 @@ Route::get('saludonombre/{nombre}/{apellido}','SaludoController@saludaNombre')->
 Route::get('saludocolor/{nombre}/{color}','SaludoController@saludaColor')->name('saludocolor');
 
 
-// Ruta del ejercicio 4.3
+				// Ruta del ejercicio 4.3
+
 Route::get('/formulario',function(){
 	return view('formulario');
 })->name('formulario');
 
+//Apartado A
 Route::get('formulario-contacto','FormularioController@show')->name('formulario-contacto');
 
 Route::get('formulario-contacto/get','SaludoController@saludaNombre')->name('saludonombre2');
+
+//Apartado B
+Route::get('formulario-idiomas','FormularioController@show2')->name('formulario-idiomas');
+
+Route::post('formulario-idiomas/post','SaludoController@saludaIdiomas')->name('saludoidiomas');
