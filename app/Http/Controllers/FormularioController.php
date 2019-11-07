@@ -12,4 +12,7 @@ class FormularioController extends Controller
     function show2(){
     	return view('formulario-idiomas');
     }
+    function show3(){
+    	return view('formulario4');
+    }
 }

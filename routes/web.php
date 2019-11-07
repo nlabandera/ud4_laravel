@@ -59,7 +59,16 @@ Route::get('formulario-contacto','FormularioController@show')->name('formulario-
 
 Route::get('formulario-contacto/get','SaludoController@saludaNombre')->name('saludonombre2');
 
-//Apartado B
+//Apartado B -->No terminado
 Route::get('formulario-idiomas','FormularioController@show2')->name('formulario-idiomas');
 
 Route::post('formulario-idiomas/post','SaludoController@saludaIdiomas')->name('saludoidiomas');
+
+
+				//Ruta del ejercicio 4.3
+Route::get('/formulario-validacion', function(){
+	return view('formulario-validacion');
+})->name('formulario-validacion');
+
+Route::get('formulario4','FormularioController@show3')->name('formulario4');
+Route::post('formulario4/post','SaludoController@muestraDatos')->name('muestra-datos');
