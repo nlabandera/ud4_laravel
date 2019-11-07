@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use Illuminate\View\Middleware\ShareErrorsFromSession; 
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Requests\ContactoRequest;
 
 
 class SaludoController extends Controller
@@ -34,6 +35,14 @@ class SaludoController extends Controller
 			'email'=>'required|email',
 			'telf'=>'required'
 		]);
+
+		return view('muestra-datos')->with('nombre',$request->input('nombre'))->with('apellido',$request->input('apellido'))->with('email',$request->input('email'))->with('telf',$request->input('telf'));
+
+
+		
+		
+	}
+	function muestraDatos2(ContactoRequest $request){
 
 		return view('muestra-datos')->with('nombre',$request->input('nombre'))->with('apellido',$request->input('apellido'))->with('email',$request->input('email'))->with('telf',$request->input('telf'));
 
