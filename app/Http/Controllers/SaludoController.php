@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use Illuminate\View\Middleware\ShareErrorsFromSession; 
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Requests\ContactoRequest;
+use App\Http\Requests\ContactoRequest;
+use App\Http\Requests\DniRequest;
+use App\Rules\DniRule;
 
 
 class SaludoController extends Controller
@@ -38,16 +40,18 @@ class SaludoController extends Controller
 
 		return view('muestra-datos')->with('nombre',$request->input('nombre'))->with('apellido',$request->input('apellido'))->with('email',$request->input('email'))->with('telf',$request->input('telf'));
 
-
-		
 		
 	}
 	function muestraDatos2(ContactoRequest $request){
 
 		return view('muestra-datos')->with('nombre',$request->input('nombre'))->with('apellido',$request->input('apellido'))->with('email',$request->input('email'))->with('telf',$request->input('telf'));
-
-
 		
+	}
+	function muestraDatosDNI(DniRequest $request){
+		$validatedData = $request->validate(['dni'=>['required', new DniRule]]);
+
+
+		return view('muestra-datos-dni')->with('nombre',$request->input('nombre'))->with('apellido',$request->input('apellido'))->with('dni',$request->input('dni'))->with('email',$request->input('email'))->with('telf',$request->input('telf'));
 		
 	}
 	

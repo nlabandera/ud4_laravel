@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ContactoRequest extends FormRequest
+class DniRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class ContactoRequest extends FormRequest
      */
     public function authorize()
     {
-        return true; //IMPORTANTE: Tiene que estar en TRUE para que funcione
+        return true;
     }
 
     /**
@@ -26,10 +26,9 @@ class ContactoRequest extends FormRequest
         return [
             'nombre' => 'required|min:2|max:15',
             'apellido'=>'required|min:2|max:45',
+            'dni'=>'required',
             'email'=>'required|email',
-            'telf'=>'required:regex:/^[0-9]$/'
+            'telf'=>'required'
         ];
     }
-    
 }
-
