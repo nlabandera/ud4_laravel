@@ -7,7 +7,7 @@
 <body>
 	<ol>
 		<li><a href="{{route('formulario4')}}">Formulario validado</a></li>
-		<li></li>
+		<li><a href="{{route('formulario-dni')}}">Formulario validado con DNI</a></li>
 	</ol>
 
 </body>

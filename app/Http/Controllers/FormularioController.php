@@ -15,4 +15,7 @@ class FormularioController extends Controller
     function show3(){
     	return view('formulario4');
     }
+    function show4(){
+    	return view('formulario-dni');
+    }
 }

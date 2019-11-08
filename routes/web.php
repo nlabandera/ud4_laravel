@@ -51,7 +51,7 @@ Route::get('saludocolor/{nombre}/{color}','SaludoController@saludaColor')->name(
 				// Ruta del ejercicio 4.3
 
 Route::get('/formulario',function(){
-	return view('formulario');
+	return view('formulario'); //Si está en una carpeta formularios.formulario
 })->name('formulario');
 
 //Apartado A
@@ -69,6 +69,9 @@ Route::post('formulario-idiomas/post','SaludoController@saludaIdiomas')->name('s
 Route::get('/formulario-validacion', function(){
 	return view('formulario-validacion');
 })->name('formulario-validacion');
-
+//Apartado A
 Route::get('formulario4','FormularioController@show3')->name('formulario4');
-Route::post('formulario4/post','SaludoController@muestraDatos')->name('muestra-datos');
+Route::post('formulario4/post','SaludoController@muestraDatos2')->name('muestra-datos');
+//Apartado B
+Route::get('formulario-dni','FormularioController@show4')->name('formulario-dni');
+Route::post('formulario-dni/post','SaludoController@muestraDatosDNI')->name('muestra-datos-dni');
