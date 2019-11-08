@@ -6,10 +6,9 @@
 </head>
 <body>
 	<ol>
-		{{$idiomas}}
-		<!--@foreach ($idiomas as $idioma)
-		<li>{{$idioma->saludo}} {{$nombre}} {{apellido}}</li>		
-		@endforeach-->
+		@foreach ($idiomas as $idioma)
+		<li>{{$idioma->saludo}} {{$nombre}} {{$apellido}}</li>		
+		@endforeach
 		
 	</ol>
 	

@@ -24,9 +24,12 @@ class SaludoController extends Controller
 	}
 	function saludaIdiomas(){
 		//No reconoce el fichero
-		$path = 'database/data/idiomas.json';
-		$idiomas = json_decode(file_get_contents($path,true));
-		return view ('saluda-idiomas',['nombre'=>request('nombre'),'apellido'=>request('apellido'),'idiomas'=>"abc"]);
+		$path = '/database/data/idiomas.json';
+		$idiomas = file_get_contents(base_path($path));
+		for ($i=0; $i<sizeof($idiomas); $i++){
+			$lenguas = json_decode($idiomas);
+		}
+		return view ('saluda-idiomas',['nombre'=>request('nombre'),'apellido'=>request('apellido'),'idiomas'=>$idiomas]);
 	}
 	
 	function muestraDatos(Request $request){
